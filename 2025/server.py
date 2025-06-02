@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory, render_template_string
+from flask import Flask, request, jsonify, render_template_string
 from datetime import datetime
 import uuid
 import os
@@ -9,9 +9,11 @@ issued_codes = {}  # { code: timestamp }
 
 @app.route("/2025/")
 def serve_challenge_page():
-    with open(os.path.join(app.static_folder, "index.html")) as f:
+    template_path = os.path.join(app.static_folder, "index.html")
+    with open(template_path, encoding="utf-8") as f:
         html = f.read()
-    return render_template_string(html, password_hex=valid_password.encode().hex())
+    password_hex = valid_password.encode().hex()
+    return render_template_string(html, password_hex=password_hex)
 
 @app.route("/2025/code", methods=["POST"])
 def get_code():

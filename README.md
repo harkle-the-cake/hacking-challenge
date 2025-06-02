@@ -53,4 +53,4 @@ sudo usermod -aG docker $USER
 ### 🐳 Starten
 git clone https://github.com/dein-benutzername/hack-challenge.git
 cd hack-challenge/2025
-docker-compose up --build -d
+CHALLENGE_PASSWORD=meinSuperPass docker-compose up --build
