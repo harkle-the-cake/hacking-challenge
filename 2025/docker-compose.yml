@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hack-challenge:
+    build: .
+    container_name: azubi-hack-2025
+    ports:
+      - "8080:8080"
+    environment:
+      - CHALLENGE_PASSWORD=gr33n4zubi
+    restart: unless-stopped
