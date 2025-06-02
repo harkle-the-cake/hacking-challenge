@@ -17,12 +17,16 @@ Finde das im JavaScript versteckte Passwort und sende es per POST an `/2025/code
 Gib den erhaltenen Code + Zeitstempel bei `/2025/verify` ein. Wenn alles passt, bekommst du als Belohnung einen Energy-Drink.
 
 ### 📂 Projektstruktur
+```bash
 hack-challenge/2025/
 ├── static/
 │ └── index.html
+├── Dockerfile
+├── docker-compose.yml
 ├── server.py
 ├── requirements.txt
 └── README.md
+```
 
 ### 🛠️ Starten (lokal)
 ```bash
