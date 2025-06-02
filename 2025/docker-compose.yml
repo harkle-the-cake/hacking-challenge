@@ -7,5 +7,5 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - CHALLENGE_PASSWORD=gr33n4zubi
+      - CHALLENGE_PASSWORD=${CHALLENGE_PASSWORD}
     restart: unless-stopped

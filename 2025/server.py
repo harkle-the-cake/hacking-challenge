@@ -4,7 +4,7 @@ import uuid
 import os
 
 app = Flask(__name__, static_folder='static')
-valid_password = os.environ.get("CHALLENGE_PASSWORD", "gr33n4zubi")
+valid_password = os.environ.get("CHALLENGE_PASSWORD")
 issued_codes = {}  # { code: timestamp }
 
 @app.route("/2025/")
